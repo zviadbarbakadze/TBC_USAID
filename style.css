@@ -4,17 +4,23 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+/* create structure of the app */
+body {
+  display: flex;
+  flex-direction: column;
+}
 
 /* header section */
 nav {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(32, 31, 31, 0.9);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   color: white;
   padding: 15px 0;
   width: 100%;
   position: fixed;
+  z-index: 5;
 }
 
 nav ul {
@@ -94,6 +100,8 @@ nav img {
 @media (max-width: 1000px) {
   .hamburger-menu {
     display: block;
+    position: fixed;
+    z-index: 10;
   }
   .nav-menu {
     position: fixed;
@@ -102,7 +110,7 @@ nav img {
     flex-direction: column;
     justify-content: flex-start;
     background-color: #262626;
-    width: 60%;
+    width: 50%;
     text-align: center;
     transition: 0.3s;
     height: 100vh;
@@ -112,5 +120,88 @@ nav img {
   }
   .nav-menu.active {
     right: 0;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  nav img {
+    margin-left: 30px;
+    width: 150px;
+  }
+}
+
+/* create section for heading  */
+
+.heading-section {
+  background-image: url("https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_980,h_352,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+}
+
+.heading-section h1 {
+  font-weight: bolder;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 3em;
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 15%;
+}
+/* create responsive design for heading section */
+@media (max-width: 1000px) {
+  .heading-section h1 {
+    font-size: 2em;
+    left: 8%;
+  }
+}
+
+/* create section for program description */
+
+.program-description {
+  background-color: #262626;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 200px;
+}
+
+.program-description p {
+  color: white;
+  font-size: 1.7em;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+.program-description a {
+  color: rgb(37, 182, 207);
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  letter-spacing: 1px;
+}
+.program-description a:hover {
+  color: #747070;
+}
+/* create responsive design for program description section */
+@media (max-width: 1000px) {
+  .program-description {
+    padding: 10px 50px;
+  }
+  .program-description p {
+    font-size: 1.2em;
+  }
+  @media (max-width: 500px) {
+    .program-description {
+      padding: 10px 20px;
+    }
+    .program-description p {
+      font-size: 1em;
+    }
   }
 }
