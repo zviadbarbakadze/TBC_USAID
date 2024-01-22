@@ -14,3 +14,40 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+let slideIndex = 1;
+let automaticSlideInterval;
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+}
+
+function plusSlides(n) {
+  clearInterval(automaticSlideInterval); // Stop automatic slideshow
+  showSlides((slideIndex += n));
+}
+
+// Automatic slideshow
+function startAutomaticSlide() {
+  automaticSlideInterval = setInterval(function () {
+    plusSlides(1);
+  }, 2000); // Change slide every 2 seconds
+}
+
+// Initial display
+showSlides(slideIndex);
+startAutomaticSlide();
