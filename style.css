@@ -4,13 +4,13 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* create structure of the app */
+
 body {
   display: flex;
   flex-direction: column;
 }
 
-/* header section */
+/* HEADER SECTION */
 nav {
   background-color: rgba(32, 31, 31, 0.9);
   display: flex;
@@ -190,7 +190,7 @@ nav img {
 .program-description a:hover {
   color: #747070;
 }
-/* create responsive design for program description section */
+/* CREATE RESPONSIVE FOR PROGRAM DESCRIPTION SECTION */
 @media (max-width: 1000px) {
   .program-description {
     padding: 10px 50px;
@@ -208,7 +208,7 @@ nav img {
   }
 }
 
-/* create learning courses section */
+/* CREATE LEARNING COURSES SECTION */
 
 .learning-courses-section {
   background-color: #0f0f0f;
@@ -266,7 +266,7 @@ div {
   align-items: center;
 }
 
-/* create responsive design for learning courses section */
+/* CREATE RESPONSIVE FOR LEARNING COURSES SECTION */
 
 @media (max-width: 1000px) {
   .learning-courses-container {
@@ -277,7 +277,7 @@ div {
   }
 }
 
-/* create slider section */
+/* CREATE SLIDER SECTION */
 .myslides {
   display: none;
 }
@@ -301,7 +301,7 @@ div {
   letter-spacing: 2px;
   position: absolute;
   top: 10%;
-  left: 18%;
+  left: 15%;
 }
 .prev,
 .next {
@@ -382,4 +382,148 @@ div {
   .slideshow-container a {
     display: none;
   }
+}
+
+/* CREATE FAQ SECTION */
+.faq-section {
+  background-color: #0f0f0f;
+  color: white;
+  padding: 50px 0;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: auto auto;
+}
+.faq-heading {
+  justify-self: center;
+  margin-left: 4em;
+}
+
+.allanswers {
+  justify-self: center;
+}
+.allanswers a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(37, 182, 207);
+  transition: 0.7s ease;
+}
+.allanswers a:hover {
+  color: grey;
+}
+.faq-container {
+  width: 70%;
+  grid-column: 1 / span 2;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+
+  border-bottom: 1px solid rgb(143, 141, 141);
+  cursor: pointer;
+  justify-self: center;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.faq-answer p {
+  padding-top: 1rem;
+
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.faq-container.active .faq-answer {
+  max-height: 500px;
+}
+
+.faq-container.active svg {
+  transform: rotate(180deg);
+}
+svg {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* CREATE FOOTER */
+
+footer {
+  background-color: rgb(27, 27, 27);
+  display: grid;
+  gap: 20px;
+  padding: 3em 10em;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  color: white;
+}
+
+.facebook-youtube-icons {
+  display: flex;
+}
+
+.soc-icon-container {
+  background-color: grey;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.tbc-logo {
+  grid-column: 1 / span 2;
+}
+.all-rights-reserved {
+  grid-column: 1 / span 3;
+}
+.all-rights-reserved p {
+  margin: 0;
+  padding: 0;
+}
+.terms-and-condotions {
+  grid-column: 1 / span 2;
+}
+.facebook-youtube-icons {
+  grid-column: 3;
+  justify-self: end;
+}
+footer button {
+  grid-column: 3;
+  justify-self: end;
+}
+.terms-and-condotions a {
+  text-decoration: none;
+  color: white;
+}
+.terms-and-condotions a:hover {
+  color: grey;
+}
+footer button {
+  width: 170px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 1px;
+  outline: none;
+  color: white;
+  background-color: rgb(16, 192, 192);
+  border: none;
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: grey;
+  color: #0f0f0f;
 }

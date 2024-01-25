@@ -64,3 +64,12 @@ function showAutoSlides() {
   slides[autoSlideIndex - 1].style.display = "block";
   setTimeout(showAutoSlides, 3000);
 }
+
+// create faq logic
+
+const faqs = document.querySelectorAll(".faq-container");
+faqs.forEach((faq) => {
+  faq.addEventListener("click", () => {
+    faq.classList.toggle("active");
+  });
+});
