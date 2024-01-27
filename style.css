@@ -52,7 +52,7 @@ nav svg {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  left: 70%;
+  left: 90%;
   top: 7%;
   transform: translate(-50%, -50%);
   cursor: pointer;
@@ -99,7 +99,7 @@ nav svg {
   .hamburger-menu {
     display: block;
     position: fixed;
-    left: 73%;
+    left: 90%;
     z-index: 10;
   }
   .nav-menu {
@@ -108,7 +108,7 @@ nav svg {
     top: 0;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: end;
     background-color: #262626;
     width: 50%;
     text-align: center;
@@ -116,7 +116,7 @@ nav svg {
     height: 100vh;
   }
   .nav-item {
-    margin: 16px 0;
+    margin: 16px 10%;
   }
   .nav-item:nth-child(1) {
     margin-top: 100px;
@@ -137,7 +137,7 @@ nav svg {
     width: 120px;
   }
   .hamburger-menu {
-    left: 70%;
+    left: 90%;
   }
 }
 
@@ -220,7 +220,7 @@ nav svg {
     padding: 10px;
   }
   .program-description p {
-    font-size: 0.8em;
+    font-size: 0.9em;
     width: 90%;
     margin-left: 20px;
   }
@@ -318,6 +318,11 @@ nav svg {
   }
   .article p {
     margin-bottom: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .article p {
+    margin-bottom: 20px;
   }
 }
 
@@ -531,7 +536,7 @@ svg {
     font-size: 1em;
   }
   .faq-container.active .faq-answer {
-    max-height: 800px;
+    max-height: 1000px;
   }
   .faq-answer p {
     font-size: 0.8em;
@@ -539,16 +544,16 @@ svg {
 }
 @media (max-width: 500px) {
   .faq-heading h2 {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .faq-question h3 {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   .allanswers a {
     font-size: 1em;
   }
   .faq-answer p {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 }
 
