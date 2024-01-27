@@ -8,9 +8,16 @@
       src="https://kit.fontawesome.com/cae774a384.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>TBC x USAID</title>
   </head>
   <body>
+    <!-- HEADER START -->
     <header>
       <nav>
         <svg
@@ -131,15 +138,19 @@
         <span class="line3"></span>
       </div>
     </header>
+    <!-- HEADER END -->
 
     <main>
+      <!-- HEADING SECTION START -->
       <section class="heading-section">
         <h1>
           TBC x USAID<br />
           ტექნოლოგიური განათლებისთვის
         </h1>
       </section>
+      <!-- HEADING SECTION END -->
 
+      <!-- PROGRAM DESCRIPTION SECTION START -->
       <section class="program-description">
         <p>
           „ TBC x USAID - ტექნოლოგიური განათლებისთვის “ პროგრამა საინფორმაციო
@@ -150,9 +161,14 @@
         </p>
         <a href="#">გაიგე მეტი</a>
       </section>
+      <!-- PROGRAM DESCRIPTION SECTION END -->
 
+      <!-- LEARNING COURSES SECTION START -->
       <section class="learning-courses-section">
-        <h2>სასწავლო კურსები</h2>
+        <div class="learning-courses-heading">
+          <h2>სასწავლო კურსები</h2>
+        </div>
+
         <div class="learning-courses-container">
           <div class="article">
             <img src="./images/AIOS.PNG" alt="aios-photo" />
@@ -282,7 +298,9 @@
           </div>
         </div>
       </section>
+      <!-- LEARNING COURSES SECTION END -->
 
+      <!-- SLIDER  SECTION START  -->
       <section class="slideshow-container">
         <h2>პროექტის პარტნიორები</h2>
         <div class="myslides fade">
@@ -306,9 +324,9 @@
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
+      <!-- SLIDER SECTION END -->
 
       <!-- FAQ SECTION START -->
-
       <section class="faq-section">
         <div class="faq-heading">
           <h2>ხშირად დასმული კითხვები</h2>
@@ -398,9 +416,10 @@
           </div>
         </div>
       </section>
-
       <!-- FAQ SECTION END -->
     </main>
+
+    <!-- FOOTER SECTION START -->
     <footer>
       <div class="tbc-logo">
         <img
@@ -409,7 +428,7 @@
         />
       </div>
       <div class="facebook-youtube-icons">
-        <div class="soc-icon-container">
+        <div class="soc-icon-container" style="margin-right: 1em">
           <img
             src="images/facebook-f.svg"
             style="width: 15px"
@@ -433,6 +452,7 @@
 
       <button>მოგვწერეთ</button>
     </footer>
+    <!-- FOOTER SECTION END -->
     <script src="script.js"></script>
   </body>
 </html>

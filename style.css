@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans Georgian", sans-serif;
 }
 
 /* HEADER SECTION */
@@ -52,8 +52,8 @@ nav svg {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  left: 90%;
-  top: 5%;
+  left: 70%;
+  top: 7%;
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
@@ -95,11 +95,11 @@ nav svg {
 }
 
 /* CREATE RESPONSIVE NAVIGATION*/
-
 @media (max-width: 1000px) {
   .hamburger-menu {
     display: block;
     position: fixed;
+    left: 73%;
     z-index: 10;
   }
   .nav-menu {
@@ -107,7 +107,8 @@ nav svg {
     right: -100%;
     top: 0;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: start;
+    align-items: center;
     background-color: #262626;
     width: 50%;
     text-align: center;
@@ -116,6 +117,9 @@ nav svg {
   }
   .nav-item {
     margin: 16px 0;
+  }
+  .nav-item:nth-child(1) {
+    margin-top: 100px;
   }
   .nav-menu.active {
     right: 0;
@@ -128,9 +132,16 @@ nav svg {
     width: 150px;
   }
 }
+@media (max-width: 500px) {
+  nav svg {
+    width: 120px;
+  }
+  .hamburger-menu {
+    left: 70%;
+  }
+}
 
 /* CREATE SECTION FOR HEADING  */
-
 .heading-section {
   background-image: url("https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_1349,h_352,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg");
   background-size: cover;
@@ -146,11 +157,11 @@ nav svg {
 .heading-section h1 {
   font-weight: bolder;
   color: white;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 2.5em;
 }
-/* CREATE RESPONSIVE DESIGN FOR HEADING SECTION */
 
+/* CREATE RESPONSIVE DESIGN FOR HEADING SECTION */
 @media (max-width: 1000px) {
   .heading-section {
     padding-left: 30px;
@@ -159,23 +170,27 @@ nav svg {
     font-size: 2em;
   }
 }
+@media (max-width: 500px) {
+  .heading-section h1 {
+    font-size: 1.5em;
+  }
+}
 
 /* CREATE SECTION FOR PROGRAM DESCIPTION */
-
 .program-description {
   background-color: #262626;
   height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 20px 180px;
+  padding: 20px 200px;
 }
 
 .program-description p {
   color: white;
   line-height: 1.5em;
-  font-size: 1.7em;
-  letter-spacing: 2px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
   width: 100%;
 }
 
@@ -186,48 +201,58 @@ nav svg {
   text-decoration: none;
   transition: 0.3s ease;
   letter-spacing: 1px;
-  margin-left: 20px;
 }
 .program-description a:hover {
   color: #747070;
 }
+
 /* CREATE RESPONSIVE FOR PROGRAM DESCRIPTION SECTION */
 @media (max-width: 1000px) {
   .program-description {
-    padding: 10px 50px;
+    padding: 10px 30px;
   }
   .program-description p {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
-  @media (max-width: 500px) {
-    .program-description {
-      padding: 10px 20px;
-    }
-    .program-description p {
-      font-size: 1em;
-    }
+}
+@media (max-width: 500px) {
+  .program-description {
+    padding: 10px;
+  }
+  .program-description p {
+    font-size: 0.8em;
+    width: 90%;
+    margin-left: 20px;
+  }
+  .program-description a {
+    font-size: 1em;
+    margin-left: 20px;
   }
 }
 
 /* CREATE LEARNING COURSES SECTION */
-
 .learning-courses-section {
   background-color: #0f0f0f;
   display: flex;
   flex-direction: column;
-  padding: 40px 140px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
 }
-.learning-courses-section h2 {
+.learning-courses-heading {
+  width: 70%;
+}
+.learning-courses-heading h2 {
   color: white;
   font-weight: 400;
   margin-bottom: 60px;
-  margin-left: 55px;
   letter-spacing: 1px;
 }
 .learning-courses-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 70%;
 }
 
 .learning-courses-section .article {
@@ -241,6 +266,7 @@ nav svg {
   flex-direction: column;
   margin-bottom: 20px;
 }
+
 .article h3 {
   margin: 30px;
   letter-spacing: 1px;
@@ -249,15 +275,15 @@ nav svg {
   margin-bottom: 90px;
 }
 .article h3,
-p,
-div {
-  margin-left: 20px;
+.article p,
+.course-details-container {
+  margin-left: 5%;
 }
 .article a {
   text-decoration: none;
   transition: 0.7s ease;
   color: rgb(37, 182, 207);
-  margin-left: 10px;
+  margin-left: 5%;
   margin-bottom: 8px;
 }
 .article a:hover {
@@ -269,31 +295,29 @@ div {
 }
 
 /* CREATE RESPONSIVE FOR LEARNING COURSES SECTION */
-
 @media (max-width: 1000px) {
   .learning-courses-section {
-    text-align: center;
+    padding: 40px 0px;
   }
-  .learning-courses-section h2 {
-    margin-left: 0;
+  .learning-courses-heading {
+    text-align: center;
+    font-size: 0.8em;
+  }
+  .learning-courses-container {
+    justify-content: space-around;
+    width: 90%;
   }
 
   .learning-courses-section .article {
-    width: 280px;
+    width: 300px;
     height: 350px;
   }
-  .learning-courses-section {
-    padding-left: 50px;
-  }
+
   .article h3 {
     font-size: 1em;
-    margin: 20px;
   }
   .article p {
     margin-bottom: 40px;
-  }
-  .learning-courses-container {
-    justify-content: center;
   }
 }
 
@@ -302,7 +326,6 @@ div {
   display: none;
 }
 .myslides img {
-  /* vertical-align: middle; */
   height: 80px;
   margin: 20px;
 }
@@ -389,7 +412,7 @@ div {
   }
 }
 
-/* create responsive for slider */
+/* CREATE RESPONSIVE SLIDER */
 @media (max-width: 1100px) {
   .myslides img {
     width: 200px;
@@ -401,8 +424,8 @@ div {
     height: 50px;
   }
   .slideshow-container h2 {
-    font-size: 16px;
-    top: 10%;
+    font-size: 1em;
+    top: 8%;
 
     align-self: center;
   }
@@ -415,9 +438,9 @@ div {
 .faq-section {
   background-color: #0f0f0f;
   color: white;
-  padding: 100px 0 50px 0;
+  padding: 100px 0 80px 0;
   display: grid;
-  gap: 1em;
+  gap: 2em;
   grid-template-columns: auto auto;
 }
 .faq-heading {
@@ -467,7 +490,6 @@ div {
 }
 .faq-answer p {
   padding-top: 1rem;
-
   font-size: 16px;
   letter-spacing: 1px;
 }
@@ -483,7 +505,6 @@ svg {
 }
 
 /* RESPONSIVE FOR FAQ */
-
 @media (max-width: 1000px) {
   .allanswers {
     grid-column: 1 / span2;
@@ -495,7 +516,8 @@ svg {
     grid-column: 1 / span2;
     justify-self: center;
     text-align: center;
-    width: 100%;
+    width: 90%;
+    font-size: 1em;
   }
   .faq-heading h2 {
     font-size: 1.2em;
@@ -515,8 +537,22 @@ svg {
     font-size: 0.8em;
   }
 }
-/* CREATE FOOTER */
+@media (max-width: 500px) {
+  .faq-heading h2 {
+    font-size: 0.8em;
+  }
+  .faq-question h3 {
+    font-size: 0.7em;
+  }
+  .allanswers a {
+    font-size: 1em;
+  }
+  .faq-answer p {
+    font-size: 0.6em;
+  }
+}
 
+/* CREATE FOOTER */
 footer {
   background-color: rgb(27, 27, 27);
   display: grid;
@@ -540,7 +576,6 @@ footer {
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  margin-right: 1em;
 }
 .tbc-logo {
   grid-column: 1 / span 2;
@@ -575,7 +610,7 @@ footer button {
   height: 40px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   letter-spacing: 1px;
   outline: none;
@@ -586,7 +621,6 @@ footer button {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  margin-right: 1em;
 }
 
 button:hover {
@@ -621,5 +655,20 @@ button:hover {
   }
   .facebook-youtube-icons {
     grid-column: 2;
+  }
+}
+@media (max-width: 500px) {
+  footer {
+    padding: 1em;
+  }
+  footer button {
+    width: 100px;
+    font-size: 0.8em;
+  }
+  .all-rights-reserved p {
+    font-size: 0.8em;
+  }
+  .terms-and-condotions a {
+    font-size: 0.8em;
   }
 }
