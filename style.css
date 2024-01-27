@@ -4,6 +4,19 @@
   box-sizing: border-box;
   font-family: "Noto Sans Georgian", sans-serif;
 }
+:root {
+  --nav-color: rgba(31, 30, 30, 0.9);
+  --link-color: rgb(37, 182, 207);
+  --hamburger-color: rgb(248, 242, 242);
+  --grey: #262626;
+  --link-hover: #747070;
+  --black: #0f0f0f;
+  --article-border: rgb(124, 122, 122);
+  --article-linkhover: rgb(12, 103, 119);
+  --slides-container: rgb(43, 42, 42);
+  --footer-container: rgb(27, 27, 27);
+  --button-color: rgb(16, 192, 192);
+}
 
 /* HEADER SECTION */
 header {
@@ -12,7 +25,7 @@ header {
   z-index: 100;
 }
 nav {
-  background-color: rgba(31, 30, 30, 0.9);
+  background-color: var(--nav-color);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -35,10 +48,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: rgb(37, 182, 207);
+  color: var(--link-color);
 }
 nav ul li .active {
-  color: rgb(37, 182, 207);
+  color: var(--link-color);
 }
 nav svg {
   cursor: pointer;
@@ -60,7 +73,7 @@ nav svg {
 .line1,
 .line2,
 .line3 {
-  background-color: rgb(248, 242, 242);
+  background-color: var(--hamburger-color);
   width: 30px;
   height: 3px;
   border-radius: 5px;
@@ -109,7 +122,7 @@ nav svg {
     flex-direction: column;
     justify-content: start;
     align-items: end;
-    background-color: #262626;
+    background-color: var(--nav-color);
     width: 50%;
     text-align: center;
     transition: 0.3s;
@@ -178,7 +191,7 @@ nav svg {
 
 /* CREATE SECTION FOR PROGRAM DESCIPTION */
 .program-description {
-  background-color: #262626;
+  background-color: var(--grey);
   height: 450px;
   display: flex;
   flex-direction: column;
@@ -195,7 +208,7 @@ nav svg {
 }
 
 .program-description a {
-  color: rgb(37, 182, 207);
+  color: var(--link-color);
   font-size: 1.3em;
   font-weight: bold;
   text-decoration: none;
@@ -203,7 +216,7 @@ nav svg {
   letter-spacing: 1px;
 }
 .program-description a:hover {
-  color: #747070;
+  color: var(--link-hover);
 }
 
 /* CREATE RESPONSIVE FOR PROGRAM DESCRIPTION SECTION */
@@ -220,7 +233,7 @@ nav svg {
     padding: 10px;
   }
   .program-description p {
-    font-size: 0.9em;
+    font-size: 1em;
     width: 90%;
     margin-left: 20px;
   }
@@ -232,7 +245,7 @@ nav svg {
 
 /* CREATE LEARNING COURSES SECTION */
 .learning-courses-section {
-  background-color: #0f0f0f;
+  background-color: var(--black);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -256,7 +269,7 @@ nav svg {
 }
 
 .learning-courses-section .article {
-  border: 1px solid rgb(124, 122, 122);
+  border: 1px solid var(--article-border);
   width: 303px;
   height: 420px;
   padding-bottom: 20px;
@@ -282,12 +295,12 @@ nav svg {
 .article a {
   text-decoration: none;
   transition: 0.7s ease;
-  color: rgb(37, 182, 207);
+  color: var(--link-color);
   margin-left: 5%;
   margin-bottom: 8px;
 }
 .article a:hover {
-  color: rgb(12, 103, 119);
+  color: var(--article-linkhover);
 }
 .course-details-container {
   display: flex;
@@ -338,7 +351,7 @@ nav svg {
 .slideshow-container {
   position: relative;
   margin: auto;
-  background-color: rgb(43, 42, 42);
+  background-color: var(--slides-container);
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -380,14 +393,14 @@ nav svg {
 
 .prev:hover,
 .next:hover {
-  color: gray;
+  color: var(--link-hover);
 }
 .dot {
   cursor: pointer;
   height: 7px;
   width: 7px;
   margin: 0 5px;
-  background-color: #f5eded;
+  background-color: white;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -441,7 +454,7 @@ nav svg {
 
 /* CREATE FAQ SECTION */
 .faq-section {
-  background-color: #0f0f0f;
+  background-color: var(--black);
   color: white;
   padding: 100px 0 80px 0;
   display: grid;
@@ -464,19 +477,19 @@ nav svg {
   text-decoration: none;
   font-size: 22px;
   font-weight: bold;
-  color: rgb(37, 182, 207);
+  color: var(--link-color);
   transition: 0.7s ease;
   margin-left: 3em;
 }
 .allanswers a:hover {
-  color: grey;
+  color: var(--link-hover);
 }
 .faq-container {
   width: 70%;
   grid-column: 1 / span 2;
   margin-top: 1.5em;
   padding-bottom: 1em;
-  border-bottom: 1px solid rgb(143, 141, 141);
+  border-bottom: 1px solid var(--grey);
   cursor: pointer;
   justify-self: center;
 }
@@ -559,7 +572,7 @@ svg {
 
 /* CREATE FOOTER */
 footer {
-  background-color: rgb(27, 27, 27);
+  background-color: var(--footer-container);
   display: grid;
   gap: 20px;
   padding: 3em 10em;
@@ -608,7 +621,7 @@ footer button {
   color: white;
 }
 .terms-and-condotions a:hover {
-  color: grey;
+  color: var(--link-hover);
 }
 footer button {
   width: 170px;
@@ -617,20 +630,21 @@ footer button {
   cursor: pointer;
   font-size: 1em;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   outline: none;
   color: white;
-  background-color: rgb(16, 192, 192);
+  background-color: var(--button-color);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: 0.7s ease;
 }
 
 button:hover {
-  background-color: grey;
-  color: #0f0f0f;
+  background-color: var(--link-hover);
+  color: var(--grey);
 }
 
 /* RESPONSIVE FOR FOOTER */
