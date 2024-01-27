@@ -1,6 +1,6 @@
 # TBCxUSAID
 
-Description of your project.
+Description of project.
 
 ## Table of Contents
 - [Overview](#overview)
