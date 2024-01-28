@@ -32,12 +32,10 @@ The project structure is straightforward, consisting of three main components:
 To run the project locally, follow these steps:
 
 1. Clone the repository to your local machine:
-   ```bash
+  
    git clone https://github.com/zviadbarbakadze/TBC_USAIDt.git
 
-   
-
-   Open the project folder:cd TBC_USAID
+    Open the project folder:cd TBC_USAID
  
    Open the index.html file in your preferred web browser.
 
