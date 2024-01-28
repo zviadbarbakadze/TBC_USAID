@@ -33,9 +33,9 @@ To run the project locally, follow these steps:
 
 1. Clone the repository to your local machine:
   
-   git clone https://github.com/zviadbarbakadze/TBC_USAIDt.git
+   git clone https://github.com/zviadbarbakadze/tbc-usaid.git
 
-    Open the project folder:cd TBC_USAID
+    Open the project folder:cd tbc-usaid
  
    Open the index.html file in your preferred web browser.
 
